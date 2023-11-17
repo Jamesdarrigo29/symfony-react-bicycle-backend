@@ -1,0 +1,10 @@
+nelmio_cors:
+    defaults:
+        allow_origin: ['%env(CORS_ALLOW_ORIGIN)%']
+        allow_methods: ['GET', 'OPTIONS']  # Add other methods if needed
+        allow_headers: ['Content-Type']
+        max_age: 3600
+
+    paths:
+        '^/api/':
+            allow_origin: ['https://symfony-react-bicycle-app.vercel.app']

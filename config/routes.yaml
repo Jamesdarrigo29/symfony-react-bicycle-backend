@@ -1,0 +1,9 @@
+run_bicycle:
+    path: /api/bicycle/run
+    controller: App\Controller\BicycleController::runBicycle
+    methods: [GET, OPTIONS]
+
+test_endpoint: 
+    path: /api/bicycle/test
+    controller: App\Controller\BicycleController::testEndpoint
+    methods: [GET]

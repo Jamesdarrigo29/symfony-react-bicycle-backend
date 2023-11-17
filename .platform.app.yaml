@@ -1,0 +1,12 @@
+name: bicycle-app-backend
+type: php:8.2
+disk: 1024
+
+hooks:
+    build: |
+        composer install
+        
+    deploy: |
+        php bin/console cache:clear
+    
+    
