@@ -1,3 +1,8 @@
 "https://{default}/":
     type: upstream
     upstream: "bicycle-app-backend:http"
+
+test_endpoint:
+    path: /api/bicycle/test
+    controller: App\Controller\BicycleController::testEndpoint
+    methods: [GET]
