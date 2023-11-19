@@ -2,11 +2,24 @@ name: bicycle-app-backend
 type: php:8.2
 disk: 1024
 
+dependencies:
+    php: 
+        composer/composer: '^2'
+
 hooks:
     build: |
         composer install
         
     deploy: |
         php bin/console cache:clear
+
+web:
+    locations:
+        "/":
+            # The public directory of the app, relative to its root.
+            root: "web"
+            # The front-controller script to send non-static requests to.
+            passthru: "/index.php"
+        
     
     
