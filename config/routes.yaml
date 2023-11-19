@@ -6,4 +6,4 @@ run_bicycle:
 test_endpoint: 
     path: /api/bicycle/test
     controller: App\Controller\BicycleController::testEndpoint
-    methods: [GET]
+    methods: [GET, OPTIONS]
